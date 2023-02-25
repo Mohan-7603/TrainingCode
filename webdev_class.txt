@@ -1,0 +1,472 @@
+/*const body=document.body;
+body.append("hello world"); */  // display this in browser
+
+/*const body=document.body;
+body.appendChild("hello world");*/  //Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+                                    //at script.js:5:6
+
+
+/*note:-
+if we use append we can able to add more strings in single line
+for ex: 
+ body.append("hello","bye");
+but in appendChild():
+we cannot add more strings, we can only add one */
+
+/*const body = document.body;
+const div=document.createElement("div");
+div.innerText="hello";
+body.append(div);  // which is display in browser
+body.appendChild(div); // which also works but we mostly use append*/
+
+/*we can also use textContent instead of innerHTML
+for ex:
+const body = document.body;
+const div=document.createElement("div");
+div.textContent="hello";
+body.append(div);  // which is display in browser
+body.appendChild(div);
+*/
+
+//then what is difference between innerText and TextContent
+
+/*for ex:
+in your html add below Code
+
+<body>
+<div>
+  <span>welcome</span>
+  <span style="display: none">KSR</span>
+</div>
+</body>
+
+in js:
+
+const div =document.querySelector('div');
+console.log(div.textContent);
+
+//output:
+// welcome
+// KSR 
+
+console.log(div.innerText);
+//
+// welcome 
+//
+
+*/
+//.....
+
+/*for ex:
+in you html add below Code
+
+<body>
+<div>
+  <span>welcome</span>
+  <span>KSR</span>
+</div>
+</body>
+
+in js:
+
+const div =document.querySelector('div');
+console.log(div.textContent);
+
+//output:
+// welcome
+// KSR 
+
+console.log(div.innerText);
+//
+// welcome KSR
+//
+*/
+// textContent shows like display: block  but textContent shows like display: inlne
+
+
+
+
+/*//html modify Element
+
+//first remove html body content then use previous create div step in js
+
+const body = document.body;
+const div=document.createElement("div");
+div.innerText="<strong>hello</strong>";
+// (or)                          // the two output same nothing changes in broswer
+                                  //because html not modified
+div.textContent="<strong>welcome</strong>"
+
+body.append(div);  // which is display in browser
+body.appendChild(div); // which also works but we mostly use appends
+*/
+
+/* suppose we need to modify html content when use html element
+   we use innerHTML
+
+const body = document.body;
+const div=document.createElement("div");
+div.innerHTML="<strong>hello</strong>"; // IF WE USE HTML ELEMENT WHICH IS WORK FINE
+body.append(div);  // which is display in browser
+body.appendChild(div); // which also works but we mostly use append*/
+
+
+/*//WE CAN DO THE ABOVE STEPS THE FOLLOWING CODE
+
+const body = document.body;
+const div=document.createElement("div");
+const strong= document.createElement("strong");
+strong.innerText="welcomeksr"; // IF WE USE HTML ELEMENT WHICH IS WORK FINE
+div.append(strong);
+body.append(div);  // which is display in browser
+//body.appendChild(div); // which also works but we mostly use append
+*/
+/*//we can test remove element 
+//in html: first add id in two span element
+
+const body=document.body;
+const div=document.querySelector('div');
+const id1=document.querySelector('#id1');
+const id2=document.querySelector('#id2');
+id2.remove();
+//we can also add later this
+//div.append(id2); // shows id2 textContent
+
+// we can another way remove element
+
+//div.removeChild(id1);*/
+
+
+
+
+/* //how we getAttribute of any element
+const body=document.body;
+const div=document.querySelector('div');
+const id1=document.querySelector('#id1');
+const id2=document.querySelector('#id2');
+
+console.log(id1.id); // id attribute value display
+// or
+
+console.log(id1.getAttribute('id')) // id attribute value display*/
+
+
+
+/*// how to set attribute value in element
+const body=document.body;
+const div=document.querySelector('div');
+const id1=document.querySelector('#id1');
+const id2=document.querySelector('#id2');
+
+console.log(id1.setAttribute('id','test')); // here id value changed
+
+// (or)
+
+ id1.id="test"
+ console.log(id1.id); // "test" id value changed*/
+
+/*how to remove Attribute 
+  const body=document.body;
+  const div=document.querySelector('div');
+  const id1=document.querySelector('#id1');
+  const id2=document.querySelector('#id2');
+
+  id2.removeAttribute('id'); // here remove attribute of id in id2 
+  */
+
+
+/*how to use data attribute in html
+
+html:
+
+<div>
+<span id="hi" data-test="demo result"></span>
+<span id="id2"> welcome</span>
+</div>*/
+
+
+ /*const body=document.body;
+  const div=document.querySelector('div');
+  const id1=document.querySelector('#id1');
+  const id2=document.querySelector('#id2');
+  console.log(id1.dataset);
+  // when check this in console
+                         // DOMStringMap{test:'demo result'}
+                         
+// suppose if i add one more data attribute in html element
+// like <span id="hi" data-test="demo result" data-full-name="testing">welcome</span>
+
+   //console.log(id1.dataset); //// when check this in console
+                         // DOMStringMap{test:'demo result', "fullName": 'testing'}
+                         // Note: here the name of dataset changed camelcase
+// suppose if we want to access test or fullName 
+// console.log(id1.dataset.test) // demo result print
+// console.log(id1.dataset.fullName) // 'testing'
+
+
+
+/*here we set new data attribute via js
+
+id1.dataset.newName="hiiii";
+
+//when you inspect this is ...id1
+<span id="" data-test="" data-full-name="" data-new-name=""></span>
+*/
+
+
+/* here we how to add class in particular element and remove class in particular element
+using js
+
+<span id="id2" class="class1 class2">welco</span>
+
+id2.classList.add('class3'); // here new class name class3 will add in id of id2 element
+                             // check this
+//remove
+
+id2.classList.remove('class1'); // here existing class name class1 removed from the element
+
+
+// we can also use toggle method which we can add class or add in elemnt 
+// for ex:
+
+id2.classList.toggle("class4", true);
+
+//
+
+id2.classList.toggle("class4", false);
+
+*/
+
+/* final style manipulate
+
+id2.style.backgroundColor="red" */
+
+
+
+/*// dom traversal learn
+
+//Html:
+<div class="grand-parent" id="grand-parent">
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</div>
+
+//js:
+
+const grandParent= document.getElementById("grand-parent");
+grandParent.style.backgroundColor="red";
+
+//or
+
+const grandParent= document.getElementById("grand-parent");
+
+changeColor(grandParent);
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+/*  how to access parent class
+
+//const parents= document.getElementById("grand-parent");
+
+//parents.forEach(changeColor); // but this not work why because the above class reference is not nodelist 
+                              // so we used Array.from() method
+
+
+const parents= Array.from(document.getElementById("grand-parent"));
+
+parents.forEach(changeColor);
+
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+/*how to access grandparent id vis querySelector
+
+const grandParent= document.querySelector("#grand-parent");
+
+changeColor(grandParent)
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+/*how to change background first parent element using querySelector
+const parent= document.querySelector(".parent");
+
+changeColor(parent)
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+ 
+
+/* all parent change
+const parents= document.querySelectorAll(".parent");
+
+parents.forEach(changeColor);
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+
+
+*/
+
+
+/* how to use children property
+const grandParent= document.querySelector(".grandparent");
+const parents=Array.from(grandParents.children);
+
+parents.forEach(changeColor);
+
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+*/
+
+/* how to change background of first children of first parent
+const grandParent= document.querySelector(".grandparent");
+const parents=Array.from(grandParents.children);
+const parentOne=parents[0]
+const children=parentOne.children
+
+changeColor(children[0]);
+
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+/* the above same code like below
+
+const grandParent= document.querySelector(".grandparent");
+const childOne= grandParent.querySelector(".child");
+
+
+changeColor(childOne);
+
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+/* every child change use querySelectorAll()
+const grandParent= document.querySelector(".grandparent");
+const children= grandParent.querySelectorAll(".child");
+
+
+children.forEach(changeColor);
+
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+/* here child 1 use id="child-one" dirctly in html
+
+const childOne= document.querySelector("#child-one");
+changeColor(childOne)
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+/*here we use to get parent from childone using parentElement
+
+const childOne= document.querySelector("#child-one");
+const parent=  childOne.parentElement;
+
+changeColor(parent)
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+/* here we use to get grandparent from childone using parentElement
+const childOne= document.querySelector("#child-one");
+const parent=  childOne.parentElement;
+const grandParent= parent.parentElement;
+
+changeColor(grandParent)
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+/* here we use closest function()
+
+const childOne= document.querySelector("#child-one");
+
+const grandParent= childOne.closest(".grandParent");
+
+changeColor(grandParent)
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+/* how to use nextElementsibling
+const childOne= document.querySelector("#child-one");
+const childTwo= childOne.nextElementSibling;
+
+changeColor(childTwo);
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+*/
+
+/* how to use previousElementSibling
+
+const childOne= document.querySelector("#child-one");
+const childTwo= childOne.nextElementSibling;
+
+changeColor(childTwo.previousElementSibling);
+
+function changeColor(element){
+    element.style.backgroundColor="red";
+}
+
+*/
+
+
+/* DOM Nodes
+everything in an HTML document is a node
+
+The entire document is a document node
+Every HTML element is an element node
+The text inside HTML elements are text nodes
+Every HTML attribute is an attribute node (deprecated)
+All comments are comment nodes
+*/
