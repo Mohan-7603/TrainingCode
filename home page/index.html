@@ -56,9 +56,27 @@
                     <div class="find">  
                         <button type="submit" class="findst" ><ion-icon name="search-outline" ></ion-icon></button>
                     </div>
-                    <div class="cart">
+                    <div class="box-cart">
+                        <div class="cart-count">0</div>
                         <ion-icon name="cart-outline"></ion-icon>
-                    </div>
+                      </div>
+                
+                      <div class="cart">
+                        <div class="cart-title">Cart Items</div>
+                        <div class="cart-content">
+                       </div>
+                        
+                      <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">Rs.0</div>
+                      </div>
+                
+                      <button class="btn-buy">Place Order</button>
+                
+                      <ion-icon name="close" id="cart-close"></ion-icon>
+                
+                      </div>
+                  
                     
                 <div class = "lang-box" id="box2">
                 <select id="language">
@@ -103,6 +121,7 @@
     </nav>
 </header>
 <section >
+
     <!-- <div class="icon">
        </ion-icon>
     </div>
@@ -160,7 +179,6 @@
       <div class="mySlides fade">
         <img src="https://m.media-amazon.com/images/I/61gPOiG6YiL._SX3000_.jpg" style="width:100%">
       </div>
-      <ion-icon name="close-circle-outline" class="close" style="font-size: 64px;"></ion-icon>
 
     </div>
     <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -193,55 +211,46 @@
     </div>
     </div>                        
     <div class="lap">
-        <img src="https://m.media-amazon.com/images/G/31/img19/AMS/Houseads/Laptops-Sept2019._CB436595915_.jpg" alt="laptop" width="400">
+        <img src="https://m.media-amazon.com/images/G/31/img19/AMS/Houseads/Laptops-Sept2019._CB436595915_.jpg" alt="laptop" height="250" width="319">
     </div>
+    <div class="shop-content">
+
+
+        <div class="food-box" >
+          <div class="pic">
+            <img src="https://m.media-amazon.com/images/I/51ChiCVvASL._UX679_.jpg" class="food-img"> 
+          </div>
+          <h2 class="food-title">Puma Men's Regular T-shirt</h2>
+          <span class="food-price">Rs.40</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+  
+  
+        <div class="food-box">
+          <div class="pic"><img src="https://m.media-amazon.com/images/I/71dggiVcjNL._UX569_.jpg" class="food-img"></div>
+          <h2 class="food-title">Puma Men T-Shirt</h2>
+          <span class="food-price">Rs.65</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
     
-</section>
-<!-- <footer>
-    <div class="foot-cont">
-<div class="btop" style="text-align: center;padding: 17px;background-color: #37475A;color: white;">
-    Back to top
-</div>
-<div  class="foot-2" style="background-color: #232F3E;height: 10vh;">
-    <div class="foot-lis">
-    <ul>
-        <h4 style="color: white;">Get to Know Us</h4>
-        <li>About Us</li>
-        <li>Careers</li>
-        <li>Press Releases</li>
-        <li>Amazon Science</li>
-    </ul>
-</div>
-<div class="foot-lis">
-    <ul>
-        <h4>Get to Know Us</h4>
-        <li>About Us</li>
-        <li>Careers</li>
-        <li>Press Releases</li>
-        <li>Amazon Science</li>
-    </ul>
-</div>
-<div class="foot-lis">
-    <ul>
-        <h4>Get to Know Us</h4>
-        <li>About Us</li>
-        <li>Careers</li>
-        <li>Press Releases</li>
-        <li>Amazon Science</li>
-    </ul>
-</div>
-<div class="foot-lis">
-    <ul>
-        <h4>Get to Know Us</h4>
-        <li>About Us</li>
-        <li>Careers</li>
-        <li>Press Releases</li>
-        <li>Amazon Science</li>
-    </ul>
-</div>
-</div>
+        <div class="food-box">
+          <div class="pic"><img src="https://m.media-amazon.com/images/I/517c0nC-WwL._UX679_.jpg" class="food-img" ></div>
+          <h2 class="food-title">Puma Mens Jacket</h2>
+          <span class="food-price">Rs.1600</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+    
+        <div class="food-box">
+          <div class="pic"><img src="https://m.media-amazon.com/images/I/71XLgqbP4CL._AC_UL400_.jpg" class="food-img"></div>
+          <h2 class="food-title">Puma Men Sweatshirt
+            </h2>
+          <span class="food-price">Rs.2719</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+    
+        
     </div>
-</footer> -->
+</section>
 <footer class="footer">
     <div class="container">
         <div class="btop" style="text-align: center;padding: 17px;background-color: #37475A;color: white;position: absolute;top: 0;width: 100%;">
@@ -294,13 +303,18 @@
         </div>
     </div>
     <hr style="opacity:0.1;position: relative;bottom: 110px;">
-    <img src="log.png3ft3d1416935166817" alt="" height = "40" width = "100" style="margin-left: 42%;margin-top: -20%;">
-    <div style="border: 1px solid white;border-radius:3px;width: 8vw;margin-bottom:100px;margin-left:720px;padding: 6px;">
+    <div style="position: relative;">
+    <div style="position: absolute;left: 38%;">
+   <img src="log.png3ft3d1416935166817" alt="" height = "40" width = "100" style="margin-left: 40%;">
+</div>
+    <div style="border: 1px solid white;border-radius:3px;width: 8vw;margin-top:-90px;margin-bottom:30px;margin-left:720px;padding: 6px;">
         <ion-icon name="globe-outline" style="color:white;"></ion-icon>
-        <span style="color:white;margin-left: 4px;position: absolute;">English</span>
-        <ion-icon name="chevron-up-outline" style="position: absolute;right: 7px;top: 2px;font-size: 15px;"></ion-icon>
-        <ion-icon name="chevron-down-outline" style="position: absolute;right: 7px;top: 11px;font-size: 15px;"></ion-icon>
+        <span style="color:white;margin-left: 4px;">English</span>
+        <ion-icon name="chevron-up-outline" style="font-size: 15px;position: absolute;top: 5px;right: 39.3%;"></ion-icon>
+        <ion-icon name="chevron-down-outline" style="position: absolute;right: 39.2%;top: 14px;font-size: 15px;"></ion-icon>
     </div>
+</div>
+
     <div class="last" style="height: 50px;text-align-last: center;">
         <a href="" style="color: white;font-size: 13px;">Australia </a>
         <a href="" style="color: white;font-size: 13px"> Brazil</a>
@@ -321,14 +335,14 @@
         <a href="" style="color: white;font-size: 13px">United Kingdom</a>
         <a href="" style="color: white;font-size: 13px">United States</a>
     </div>
-<div style="height: 17vh;text-align: center;background-color: #131a22;">
+<div style="height: 22vh;text-align: center;background-color: #131a22;margin-top: -9%;">
 <div class="last1">
     <a href="">Conditions of Use & Sale</a>
     <a href="">Privacy Notice</a>
     <a href="">Interest-Based Ads</a>
 </div>
         <span style="color: white;font-size:14px;opacity: 0.7;">&copy; 1996-2023, Amazon.com, Inc. or its affiliates</span>
-</div>
+        
 </footer>
     <script src="index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
